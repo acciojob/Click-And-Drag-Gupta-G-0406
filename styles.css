@@ -68,3 +68,25 @@ body {
 
 .item:nth-child(even) { transform: scaleX(1.31) rotateY(40deg); }
 .item:nth-child(odd) { transform: scaleX(1.31) rotateY(-40deg); }
+
+
+
+/* Update your .items class */
+.items {
+  position: relative; /* Boundary reference */
+  height: 800px;
+  width: 1000px; /* Fixed width for a clear boundary */
+  overflow: hidden; /* No more scrollbars */
+  border: 5px solid rgba(255,255,255,0.5);
+  display: block; /* Remove flex/inline-flex for free positioning */
+}
+
+/* Update your .item class */
+.item {
+  position: absolute; /* Allows manual X/Y positioning */
+  width: 150px;
+  height: 150px;
+  cursor: grab;
+  user-select: none;
+  /* Remove the nth-child transforms for a flatter, more "draggable" feel */
+}
